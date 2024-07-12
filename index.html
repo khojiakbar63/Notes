@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1 id="notify"></h1>
+    <div class="container">
+        
+        <div class="wrapper w-[100vw] h-[100vh] bg-[#FFE9D0] flex items-center justify-center">
+
+            <div class="screen bg-[#120311]  rounded-[30px] h-[832px] w-[430px] pt-[78px] px-[10px]">
+                  <!---------------------- Edittng Modal Page ---------->
+                <div id="editting-modal-page" class="text-white hidden">
+                    <div class="flex items-center justify-between">
+                        <button id="edit-back" class="flex items-center justify-center gap-[0px] text-">
+                            <i class='bx bxs-chevron-left'></i>
+                            <p>Back</p>
+                        </button>
+                        <button type="submit" id="edit-done">Done</button>
+                    </div>
+
+                    <form id="edit-form" action="#" class="flex flex-col gap-[20px] mt-[50px]">
+                        <label for="edit-title" class="flex gap-6">
+                            <input id="edit-title" type="text" placeholder="Title" class="w-full">
+                            <button type="submit" class="btn text-[12px] text-[#BFCBA8] px-6 hover:bg-[#56776C] rounded bg-[#5B8A72]">SAVE</button>
+                        </label>
+    
+                        <label for="edit-body">
+                            <textarea id="edit-body" type="text" placeholder="Content" class="w-full"></textarea>
+                        </label>
+
+                        
+                    </form>
+                   
+                </div>
+
+                <!-------------------- Global Search ------------------>
+                <div class="flex items-center justify-between mb-[31px]">
+                    <label for="g-search" id="search-label">
+                        <i class='bx bx-search'></i>
+                        <input type="text" id="g-search" placeholder="Search notes" class="bg-transparent">
+                    </label>
+                    <i class='vr-dots bx bx-dots-vertical-rounded' ></i>
+                </div>
+                <!--------------------- Categories ------------------>
+                <div class="categories flex flex-row text-white gap-[10px]">
+                    <a href="#" class="all-btn category-btn">All</a>
+                    <a href="#" class="category-btn">Personal</a>
+                    <a href="#" class="category-btn">Office</a>
+                </div>
+                <!----------------------- Notes ------------------>
+                <div id="notes" class="rounded-xl">
+                 <!----------------------- Note ------------------>
+                  <!-- Dynamic Rendering -->
+                 
+                </div>
+
+                <!---------------------- Create Note Page ---------->
+                <div id="create-note-page" class="text-white">
+                    <div class="flex items-center justify-between">
+                        <button id="back" class="flex items-center justify-center gap-[0px] text-">
+                            <i class='bx bxs-chevron-left'></i>
+                            <p>Back</p>
+                        </button>
+                        <button id="done">Done</button>
+                    </div>
+
+                    <form id="create-form" action="#" class="flex flex-col gap-[20px] mt-[50px]">
+                        <label for="note-title">
+                            <input id="note-title" type="text" placeholder="Title" class="w-full">
+                        </label>
+    
+                        <label for="note-body">
+                            <textarea id="note-body" type="text" placeholder="Content" class="w-full"></textarea>
+                        </label>
+                    </form>
+                   
+                   
+                </div>
+
+              
+
+                <!------------------------ Plus-btn -------------->
+                <button id="plus-btn"><i class='bx bx-plus'></i></button>
+    
+            </div>
+
+        </div>
+       
+
+    </div>
+    <script src="js/utilities.js"></script>
+    <script src="js/crud.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
